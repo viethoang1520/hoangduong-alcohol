@@ -40,12 +40,12 @@ export default function Footer() {
           <Col xs={24} md={10}>
             <div className='footer-middle-logo'> HOÀNG DƯƠNG </div>
             <br />
-            <p>HOANGDUONG.VN chuyên phân phối sỉ và lẻ các loại Vang, Bia từ các nước trên thế giới. Với sứ mệnh lan tỏa văn hóa ẩm thực rượu vang tới nhiều người Việt hơn nữa. HOANGDUONG.VN luôn nỗ lực tìm kiếm và phân phối các dòng Vang cao cấp với giá cả tốt nhất đến người tiêu dùng Việt.</p>
+            <p className='logo-desc'>HOANGDUONG.VN chuyên phân phối sỉ và lẻ các loại Vang, Bia từ các nước trên thế giới. Với sứ mệnh lan tỏa văn hóa ẩm thực rượu vang tới nhiều người Việt hơn nữa. HOANGDUONG.VN luôn nỗ lực tìm kiếm và phân phối các dòng Vang cao cấp với giá cả tốt nhất đến người tiêu dùng Việt.</p>
           </Col>
           <Col xs={24} md={14}>
             <Row>
               <Col xs={24} md={8} lg={8} xl={8}>
-                <ul>
+                <ul className='footer-item'>
                   <li className='footer-item-title'>CHÍNH SÁCH</li>
                   <li>TÌM KIẾM</li>
                   <li>ĐỔI TRẢ</li>
@@ -56,7 +56,7 @@ export default function Footer() {
                 </ul>
               </Col>
               <Col xs={24} md={8} lg={8} xl={8}>
-                <ul>
+                <ul className='footer-item'>
                   <li className='footer-item-title'>SẢN PHẨM</li>
                   <li>SẢN PHẨM KHUYẾN MÃI</li>
                   <li>SẢN PHẨM BÁN CHẠY</li>
@@ -67,7 +67,7 @@ export default function Footer() {
                 </ul>
               </Col>
               <Col xs={24} md={8} lg={8} xl={8}>
-                <ul>
+                <ul className='footer-item'>
                   <li className='footer-item-title'>MENU</li>
                   <li>TRANG CHỦ</li>
                   <li>RƯỢU VANG</li>

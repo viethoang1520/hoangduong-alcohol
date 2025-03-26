@@ -4,7 +4,7 @@ import { Breadcrumb, Col, Row } from 'antd'
 import { Icon } from '@iconify/react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Cart from '../Cart/Cart'
+import Cart from '@/components/Cart/Cart'
 
 export default function Header() {
   const [showCart, setShowCart] = useState(false);

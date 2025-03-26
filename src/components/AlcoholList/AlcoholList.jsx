@@ -1,8 +1,8 @@
 import React from 'react'
 import './AlcoholList.scss'
 import { Col, Row, Card, Pagination } from 'antd'
-import alcoholList from '../../data/alcoholList'
-import AlcoholCard from '../AlcoholCard/AlcoholCard';
+import alcoholList from '@/data/alcoholList'
+import AlcoholCard from '@/components/AlcoholCard/AlcoholCard';
 export default function AlcoholList({ category, description }) {
   return (
     <div className='container alcohol-list'>

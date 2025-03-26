@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cart.scss'
-import Button from '../common/Button/Button'
-import Tag from '../common/Tag/Tag'
+import Button from '@/components/common/Button/Button'
+import Tag from '@/components/common/Tag/Tag'
 
 export default function Cart({show}) {
   return (
