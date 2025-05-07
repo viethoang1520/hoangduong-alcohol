@@ -17,7 +17,7 @@ export default function AlcoholList({ category, description }) {
           </Col>
         ))}
       </Row>
-      <br />
+      <br />  
       <Pagination className='alcohol-list-pagination' align="center" defaultCurrent={1} total={50} />
       <br />
     </div>
