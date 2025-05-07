@@ -22,10 +22,11 @@ export default function Header() {
   return (
     <div className='header'>
       <Row className='container header-block'>
-        <Col className='logo' xs={4}>
+        <Col className='logo' xs={12} md={10} lg={8} xl={4}  >
+          <Icon className='logo-icon' icon="material-symbols:menu" width="24" height="24" />
           <h1>HOÀNG DƯƠNG.</h1>
         </Col>
-        <Col className='middle-block' xs={10}>
+        <Col className='middle-block' xl={10}>
           <ul className='header-content-list'>
             <Link className='header-item'>
               <p>TRANG CHỦ</p>
@@ -51,7 +52,7 @@ export default function Header() {
             </Link>
           </ul>
         </Col>
-        <Col className='right-block' xs={10}>
+        <Col className='right-block' xs={12} md={14} lg={16} xl={10} >
           <Link to={'https://zalo.me/0367862734'} target='_blank' className="zalo-contact">
             <Icon className='header-phone-icon' icon="carbon:phone-voice" />
             <div className="contact-block">

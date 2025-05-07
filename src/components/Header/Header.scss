@@ -20,6 +20,14 @@
       font-weight: 700;
       color: $text-secondary;
       font-size: 2.3rem;
+
+      .logo-icon {
+        display: none;
+        margin: 0 15px 0 0;
+        @media screen and (max-width: 1200px) {
+          display: block;
+        }
+      }
     }
 
     .middle-block {
@@ -29,6 +37,10 @@
       align-items: center;
       font-size: 1.4rem;
       font-weight: 300;
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
 
       .header-content-list {
         display: flex;
@@ -56,7 +68,9 @@
       .zalo-contact {
         display: flex;
         gap: 0.8rem;
-
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
         .header-phone-icon {
           font-size: 4rem;
           color: $bg-secondary;
@@ -85,7 +99,9 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
 
         .icon-wrapper {
           position: relative;
@@ -97,8 +113,8 @@
           border-radius: 50%;
           width: 35px;
           height: 35px;
-          
-          &.cart-icon-wrapper::after{
+
+          &.cart-icon-wrapper::after {
             content: "";
             position: absolute;
             top: 45px;
@@ -108,14 +124,17 @@
             filter: drop-shadow(0px -3px 2px rgba(192, 191, 191, 0.5));
             display: none;
           }
-          &.clicked::after{
+
+          &.clicked::after {
             display: block;
           }
+
           .right-icon {
             font-size: 1.5rem;
             stroke-width: 9px;
-            
+
           }
+
           .cart-wrapper {
             position: absolute;
             top: 65px;
@@ -139,7 +158,7 @@
         min-width: 110px;
         white-space: nowrap;
         text-align: center;
-        
+
       }
 
       .order-button:hover {
