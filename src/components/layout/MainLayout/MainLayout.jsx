@@ -8,6 +8,7 @@ export default function MainLayout({ children }) {
     <div className="flex flex-col min-h-screen">
       <Banner />
       <Header />
+      
       <main className="flex-grow">
         {children}
       </main>
