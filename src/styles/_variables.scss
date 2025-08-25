@@ -2,6 +2,7 @@
   &.light-theme {
     --text-primary: #333333;
     --text-secondary: #810C2A;
+    --text-red: #ff0000;
     --theme-color-primary: #7ed4fc;
     --theme-color-secondary: #3c83f6;
     --bg-primary: #ffffff;
@@ -19,6 +20,7 @@
 
   &.dark-theme {
     --text-primary: #cccccc;
+    --text-red: #ff0000;
     --theme-color-primary: #035981;
     --theme-color-secondary: #0950c3;
     --bg-primary: #18191a;

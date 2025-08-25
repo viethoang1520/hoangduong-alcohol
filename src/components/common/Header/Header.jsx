@@ -24,7 +24,7 @@ export default function Header() {
       <Row className='container header-block'>
         <Col className='logo' xs={12} md={10} lg={8} xl={4}  >
           <Icon className='logo-icon' icon="material-symbols:menu" width="24" height="24" />
-          <h1>HOÀNG DƯƠNG.</h1>
+          <h1>VIỆT HOÀNG.</h1>
         </Col>
         <Col className='middle-block' xl={10}>
           <ul className='header-content-list'>

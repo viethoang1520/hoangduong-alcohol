@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.input-wrapper {
+
+  .input-form {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #ededed;
+    padding: 5px 18px;
+    
+    &::placeholder {
+      font-family: 'Quicksand', sans-serif; 
+      font-weight: 500; 
+      font-size: 14px;
+      color: #888;
+    }
+  }
+}
