@@ -1,0 +1,20 @@
+@import '@/styles/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+.social-button-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 8px;
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  &:hover{
+    cursor: pointer;
+    background-color: $btn-bg-secondary;
+  }
+  .social-button-label{
+    font-weight: 500;
+  }
+}
