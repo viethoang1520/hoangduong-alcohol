@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
 import { Checkbox, Form, Image, Input } from 'antd';
 
-import axios from 'axios'
 import './Login.scss'
 import CustomInput from '../../components/common/CustomInput/CustomInput';
-import { use } from 'react';
 import Button from '@/components/common/Button/Button';
 import SocialButton from './SocialButton/SocialButton';
-import axiosClient from '../../apis/axiosClient';
 import { login } from '../../apis/authentication';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-
-  const handleLogin = async ({username, password}) => {
+  const navigate = useNavigate()
+  const handleLogin = async ({ username, password }) => {
     try {
       const response = await login({ username, password })
       const token = response.data.token
-      localStorage.setItem("accessToken", token)
-      console.log(token)
+      if (token) {
+        console.log(token)
+        localStorage.setItem("accessToken", token)
+        navigate("/")
+      }
     } catch (error) {
       console.log(error)
     }
-    
+
   };
   return (
     <div className="login-wrapper">
@@ -32,12 +33,15 @@ const Login = () => {
       </div>
       <div className="form-wrapper">
 
-        <form className="form-section">
+        <form className="form-section" onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin({username, password})
+        }}>
           <h1 className='login-title'>Đăng nhập</h1>
           <div className="form-input">
 
             <CustomInput
-              name={'username'}
+              name={'username'} 
               type={'text'}
               placeholder={'Tài khoản'}
               width={400}
@@ -55,7 +59,7 @@ const Login = () => {
             width={170}
             height={55}
             buttonType={'primary'}
-            onClick={() => handleLogin({username, password})}
+            // onClick={() => handleLogin({ username, password })}
           />
         </form>
 

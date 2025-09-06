@@ -6,6 +6,7 @@ export default function Button({ content, width, height, onClick, buttonType }) 
       width: `${width}px`,
       height: `${height}px`,
     }}
+      type='submit'
       onClick={onClick}
       className={`button-container ${buttonType}`}
     >
