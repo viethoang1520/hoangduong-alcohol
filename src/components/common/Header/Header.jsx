@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import './Header.scss'
-import { Breadcrumb, Col, Row } from 'antd'
+import { Col, Row } from 'antd'
 import { Icon } from '@iconify/react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import Cart from '@/components/Cart/Cart'
 
 export default function Header() {
   const [showCart, setShowCart] = useState(false);
   const handleCartClicked = async (e) => {
     e.preventDefault()
-    // event.stopPropagation()
     setShowCart(!showCart)
   }
   const handleCartContent = (e) => {
     e.stopPropagation()
   }
   useEffect(() => {
-    console.log(showCart)
+    // console.log(showCart)
   },[showCart])
   return (
     <div className='header'>
@@ -28,7 +26,7 @@ export default function Header() {
         </Col>
         <Col className='middle-block' xl={10}>
           <ul className='header-content-list'>
-            <Link className='header-item'>
+            <Link to={'/'} className='header-item'>
               <p>TRANG CHỦ</p>
             </Link>
             <Link className='header-item'>
@@ -46,8 +44,8 @@ export default function Header() {
 
               <Icon className='arrow-down' icon="iconamoon:arrow-down-2-thin" />
             </Link>
-            <Link className='header-item'>
-              <p>QUÀ TẶNG</p>
+            <Link to={"/login"} className='header-item'>
+              <p>ĐĂNG NHẬP</p>
               <Icon className='arrow-down' icon="iconamoon:arrow-down-2-thin" />
             </Link>
           </ul>

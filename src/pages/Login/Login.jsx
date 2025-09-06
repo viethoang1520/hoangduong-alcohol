@@ -7,22 +7,23 @@ import CustomInput from '../../components/common/CustomInput/CustomInput';
 import { use } from 'react';
 import Button from '@/components/common/Button/Button';
 import SocialButton from './SocialButton/SocialButton';
+import axiosClient from '../../apis/axiosClient';
+import { login } from '../../apis/authentication';
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
-  const onFinish = (values) => {
-    axios.post('http://localhost:3000/auth/login', {
-      email: values.email,
-      password: values.password,
-    })
-      .then(res => {
-        console.log(res)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+  const handleLogin = async ({username, password}) => {
+    try {
+      const response = await login({ username, password })
+      const token = response.data.token
+      localStorage.setItem("accessToken", token)
+      console.log(token)
+    } catch (error) {
+      console.log(error)
+    }
+    
   };
   return (
     <div className="login-wrapper">
@@ -46,7 +47,7 @@ const Login = () => {
               name={'password'}
               type={'password'}
               placeholder={'Mật khẩu'}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <Button
@@ -54,7 +55,7 @@ const Login = () => {
             width={170}
             height={55}
             buttonType={'primary'}
-            onClick={onFinish}
+            onClick={() => handleLogin({username, password})}
           />
         </form>
 
