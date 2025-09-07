@@ -17,7 +17,6 @@ const Login = () => {
       const response = await login({ username, password })
       const token = response.data.token
       if (token) {
-        console.log(token)
         localStorage.setItem("accessToken", token)
         navigate("/")
       }

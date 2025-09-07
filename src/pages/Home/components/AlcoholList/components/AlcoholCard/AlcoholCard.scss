@@ -14,6 +14,10 @@
     font-weight: 300;
     color: $text-secondary;
     height: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // max-width: 220px;
   }
 
   .alcohol-rating {
