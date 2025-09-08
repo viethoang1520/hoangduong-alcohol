@@ -73,7 +73,7 @@ export default function ProductDetails() {
             <p className="product-detail-info-label">- Xuất xứ: </p>
             <p className="product-detail-info-label">- Thương hiệu: {wine?.brand}</p>
             <p className="product-detail-info-label">- Tuổi rượu: {wine?.vintage}</p>
-            <p className="product-detail-info-label">- Nồng Độ: {wine?.alcoholContent}</p>
+            <p className="product-detail-info-label">- Nồng Độ: {wine?.alcoholContent}%</p>
             <p className="product-detail-info-label">- Dung Tích: {wine?.volume}ml </p>
             <p className="product-detail-info-label">- Sẵn kho: {wine?.stockQuantity} chai </p>
           </Col>
