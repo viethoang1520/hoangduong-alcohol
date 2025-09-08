@@ -34,6 +34,19 @@ function ConfigProviderAntd({ children }) {
             colorPrimary: '#810C2A',         // The primary color used for the component
             algorithm: true,                // Enables Ant Design's algorithm to automatically generate derived colors
             // (like hover, active, etc.) based on the primary color
+            borderRadius: 0 
+          },
+          InputNumber: {
+            activeBorderColor: '#810C2A',    // The border color when the input is focused/active
+            hoverBorderColor: '#810C2A',     // The border color when hovering over the input
+            activeShadow: '0 0 0 2px rgba(129, 12, 42, 0.1)',  // The shadow effect when input is focused
+            // Format: offset-x | offset-y | blur-radius | spread-radius | color
+            colorBorder: '#d9d9d9',          // The default border color in normal state
+            colorPrimaryHover: '#810C2A',    // The color used for hover states of primary elements
+            colorPrimary: '#810C2A',         // The primary color used for the component
+            algorithm: true,                // Enables Ant Design's algorithm to automatically generate derived colors
+            // (like hover, active, etc.) based on the primary color
+            borderRadius: 0 
           },
           Button: {
             colorPrimary: '#810C2A',           // Default button color

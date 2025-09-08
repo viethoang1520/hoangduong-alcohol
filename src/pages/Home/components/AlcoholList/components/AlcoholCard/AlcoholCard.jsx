@@ -47,7 +47,6 @@ export default function AlcoholCard({ alcohol }) {
           </div>
         </div>
       </Card>
-      
     </>
   )
 }
