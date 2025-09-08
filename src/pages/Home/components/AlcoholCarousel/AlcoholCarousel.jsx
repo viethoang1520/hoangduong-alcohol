@@ -14,23 +14,21 @@ export default function AlcoholCarousel() {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     objectFit: 'scale-down',
-    // backgroundRepeat: 'no-repeat',
-    // height: '100%', // Adjust height as needed 
   };
   return (
     <div>
       <Carousel className='carousel-block' draggable autoplay autoplaySpeed={5000} arrows infinite={false} >
         <div>
-          <h3 style={contentStyle}>1</h3>
+          <h3 style={contentStyle}></h3>
         </div>
         <div>
-          <h3 style={contentStyle}>2</h3>
+          <h3 style={contentStyle}></h3>
         </div>
         <div>
-          <h3 style={contentStyle}>3</h3>
+          <h3 style={contentStyle}></h3>
         </div>
         <div>
-          <h3 style={contentStyle}>4</h3>
+          <h3 style={contentStyle}></h3>
         </div>
       </Carousel>
 
