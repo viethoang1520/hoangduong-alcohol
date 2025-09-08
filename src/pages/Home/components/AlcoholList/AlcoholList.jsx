@@ -5,10 +5,9 @@ import AlcoholCard from '@/pages/Home/components/AlcoholList/components/AlcoholC
 import { useWineStore } from '../../../../store/wineStore';
 export default function AlcoholList({ category, description }) {
   const { wineList, setWineList } = useWineStore()
-  // const [wineData, setWineData] = useState
-  useEffect(() => {
-    console.log(wineList)
-  }, [wineList])
+  // useEffect(() => {
+  //   console.log(wineList)
+  // }, [wineList])
   return (
     <div className='container alcohol-list'>
       <h1 className='alcohol-category'>RƯỢU TRẮNG</h1>
@@ -17,7 +16,7 @@ export default function AlcoholList({ category, description }) {
         {wineList.map((wine) => (
           <Col className='item-block' key={wine.id} xs={12} md={6} lg={6} >
             <AlcoholCard
-              alcohol={wine}
+              wine={wine}
             />
           </Col>
         ))}

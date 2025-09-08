@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import axios from 'axios'
 import './AlcoholCard.scss';
-export default function AlcoholCard({ alcohol }) {
+export default function AlcoholCard({ wine }) {
   const [isHeartClicked, setIsHeartClicked] = useState(false);
   const handleAddToCart = async () => {
       const res = await axios.post('http://localhost:3000/cart/add', {
@@ -21,32 +21,32 @@ export default function AlcoholCard({ alcohol }) {
       })
   }
   return (
-    <>
+    <Link to={`/wine/${wine.id}`}>
       <Card
-        className='alcohol-card'
+        className='wine-card'
         hoverable
         size='small'
         style={{
           width: 260,
           height: 540,
         }}
-        cover={<img className='alcohol-image' alt="example" src={alcohol.image} />}
+        cover={<img className='wine-image' alt="example" src={wine.image} />}
       >
-        <p className="alcohol-name">{alcohol.name}</p>
-        <p className="alcohol-rating">{alcohol.rating} 5 đánh giá </p>
-        <p className="alcohol-price">${alcohol.price}</p>
-        <p className='alcohol-content'>CÒN HÀNG</p>
-        <p className='alcohol-content'>GIAO HÀNG SIÊU TỐC 30 PHÚT</p>
+        <p className="wine-name">{wine.name}</p>
+        <p className="wine-rating">{wine.rating} 5 đánh giá </p>
+        <p className="wine-price">${wine.price}</p>
+        <p className='wine-content'>CÒN HÀNG</p>
+        <p className='wine-content'>GIAO HÀNG SIÊU TỐC 30 PHÚT</p>
         <div className="buy-block"> 
-          <Link onClick={handleAddToCart} className="buy-button">
+          <button onClick={handleAddToCart} className="buy-button">
             <Icon className='buy-icon' icon="streamline:shopping-basket-1" />
             <p className='buy-content'>MUA NGAY</p>
-          </Link>
+          </button>
           <div className="love-block" onClick={() => setIsHeartClicked(!isHeartClicked)}>
             {isHeartClicked ? <Icon className='love-icon-filled' icon="mdi:heart" /> : <Icon className='love-icon' icon="mdi-light:heart" />}
           </div>
         </div>
       </Card>
-    </>
+    </Link>
   )
 }
