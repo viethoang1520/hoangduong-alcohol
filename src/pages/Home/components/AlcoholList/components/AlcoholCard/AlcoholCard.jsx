@@ -30,7 +30,7 @@ export default function AlcoholCard({ alcohol }) {
           width: 260,
           height: 540,
         }}
-        cover={<img className='alcohol-image' alt="example" src="https://product.hstatic.net/200000506575/product/ruou-vang-pierre-larousse-chardonnay-brut_26bba48ac40e41ce89e5d2f528d2c5ec_large.jpg" />}
+        cover={<img className='alcohol-image' alt="example" src={alcohol.image} />}
       >
         <p className="alcohol-name">{alcohol.name}</p>
         <p className="alcohol-rating">{alcohol.rating} 5 đánh giá </p>
